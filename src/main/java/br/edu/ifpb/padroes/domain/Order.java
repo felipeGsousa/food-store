@@ -10,7 +10,7 @@ public class Order {
     private Instant creationDate;
     private Restaurant restaurant;
     private List<OrderItem> orderItemList;
-    private OrderStatus status = OrderStatus.IN_PROGRESS;
+    private String status = "in progress...";
 
     public enum OrderStatus {
         IN_PROGRESS, CANCELED, PAYMENT_SUCCESS, PAYMENT_REFUSED
@@ -56,11 +56,11 @@ public class Order {
         this.orderItemList = orderItemList;
     }
 
-    public OrderStatus getStatus() {
+    public String getStatus() {
         return status;
     }
 
-    public void setStatus(OrderStatus status) {
-        this.status = status;
+    public void setStatus(String string) {
+        this.status = string;
     }
 }
